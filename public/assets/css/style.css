@@ -17,3 +17,14 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+.left {
+  float: left;;
+}
+
+.right{
+  float: right;
+}
+
+img{
+ justify-content: center;}
