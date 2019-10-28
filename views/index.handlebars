@@ -1,31 +1,44 @@
-
+<div class="container">
+	<div class="row">
+<div class="col-md-12 text-center" id="top-bar">
 <img style="width: 150px;" src="/assets/img/cuteham.png" alt="hamburgers">
-<h1 style="text-align: center;">Burgers!</h1>
+<h1>Burgers!</h1>
+	</div>
+<div class="col-md-6 text-center">
 <div class="row">
-<ul class="left">
-  {{#each burgers}}
+  <ul class="left">
+    {{#each burgers}}
     {{#unless eaten}}
-      {{> burgers/burger-block eat=true}}
+    {{> burgers/burger-block eat=true}}
     {{/unless}}
-  {{/each}}
-</ul>
-<div>
-<ul class="right">
-  {{#each burgers}}
-    {{#if eaten}}
-      {{> burgers/burger-block eat=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-</div>
-</div>
-<h2 style="text-align: center;">Make A Burger</h2>
-<form class="create-form">
-
-  <div class="form-group" style="text-align: center;">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    {{/each}}
+  </ul>
   </div>
+  </div>
+  <div  class="col-md-6 text-center">
+    <ul class="right">
+      {{#each burgers}}
+      {{#if eaten}}
+      {{> burgers/burger-block eat=false}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center enter_section">
+    <h2>Make A Burger</h2>
+    <form class="create-form">
 
-  <button  style="text-align: center;" class="center" type="submit">Add Burger</button>
-</form>
+      <div class="form-group" style="text-align: center;">
+        <label for="ca">Burger Name:</label>
+        <input type="text" id="ca" name="name">
+      </div>
+
+      <button class="btn btn-primary" type="submit">Add Burger</button>
+    </form>
+    </div>
+  </div>
+</div>
